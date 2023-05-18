@@ -1,27 +1,28 @@
 /*------------------------------------*/
-const path = require('path');
-const express = require('express');
+const path = require("path");
+const express = require("express");
 
-const publicDirPath = path.join(__dirname, '../public');
-const viewsDirPath = path.join(__dirname, '../public/views');
+const publicDirPath = path.join(__dirname, "../public");
+const viewsDirPath = path.join(__dirname, "../public/views");
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 /*------------------------------------*/
 
 /*------------------------------------*/
-app.get('', (req, res) => {
-  res.sendFile(path.join(viewsDirPath, './index.html'));
+app.get("", (req, res) => {
+  res.sendFile(path.join(viewsDirPath, "./index.html"));
 });
 
-app.get('/stalin', (req, res) => {
-  res.send('RIP Stalin');
+app.get("/stalin", (req, res) => {
+  res.send("RIP Stalin");
 });
 /*------------------------------------*/
 
 app.listen(port, () => {
   console.log(`Server is on localhost:${port}`);
 });
+///Test github
